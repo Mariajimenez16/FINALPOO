@@ -23,10 +23,10 @@ namespace ProyectoFinalPOO
         }
 
         //validar que todos los campos esten llenos antes de darle click
-        //al botón continuar
+        //al botï¿½n continuar
         private bool ValidarCampos()
         {
-            // Verificar si algún campo está vacío
+            // Verificar si algï¿½n campo estï¿½ vacï¿½o
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxGenero.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxPreferencia.Text) ||
@@ -46,7 +46,7 @@ namespace ProyectoFinalPOO
 
             try
             {
-                //activar la función de validar campos
+                //activar la funciï¿½n de validar campos
                 if (!ValidarCampos()) return;
 
                 string nombre = textBoxNombre.Text;
@@ -70,11 +70,11 @@ namespace ProyectoFinalPOO
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error de Validaciï¿½n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error al abrir la siguiente pantalla: " + ex.Message);
+                MessageBox.Show("Ocurrio un error al abrir la siguiente pantalla: " + ex.Message);
             }
 
         }
