@@ -74,7 +74,7 @@ namespace ProyectoFinalPOO
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al abrir la siguiente pantalla: " + ex.Message);
+                MessageBox.Show("Ocurrio un error al abrir la siguiente pantalla: ESTE ES EL FRONT" + ex.Message);
             }
 
         }
