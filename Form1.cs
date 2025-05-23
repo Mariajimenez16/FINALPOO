@@ -63,7 +63,9 @@ namespace ProyectoFinalPOO
 
                 Usuario nuevoUsuario = new Usuario(nombre, fechaNacimiento, genero, preferencia, nivel, ubicacionesSeleccionadas);
 
-                Form2 pantalla2 = new Form2();
+                Perfil nuevoPerfil = new Perfil(nombre, fechaNacimiento, genero, preferencia, nivel, ubicacionesSeleccionadas);
+
+                Form2 pantalla2 = new Form2(nuevoPerfil);
                 pantalla2.Show();       // Muestra la pantalla 2
                 this.Hide();            // Oculta la pantalla actual (Form1)
 
