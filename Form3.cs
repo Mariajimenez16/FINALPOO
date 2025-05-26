@@ -4,10 +4,6 @@ using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
 
 namespace ProyectoFinalPOO
 {
@@ -28,7 +24,7 @@ namespace ProyectoFinalPOO
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // ✅ Crear la lista de personas
+            
             personas = new List<Persona>
             {
                 new Persona("Manuel Vélez",   28, "Medellín",    Properties.Resources.matchman),
@@ -77,7 +73,7 @@ namespace ProyectoFinalPOO
         }
     }
 
-    // ✅ Clase Persona al final
+   
     public class Persona
     {
         public string Nombre;
