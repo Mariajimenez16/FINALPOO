@@ -8,6 +8,7 @@ namespace ProyectoFinalPOO
 {
     public class Perfil : Usuario
     {
+        private List<string> ubicacionesSeleccionadas;
 
         public string RutaFoto { get; set; }
 
@@ -16,6 +17,13 @@ namespace ProyectoFinalPOO
         {
             RutaFoto = null;
         }
+
+        public Perfil(string nombre, DateTime fechaNacimiento, string genero, string nivel, List<string> ubicaciones)
+    : base(nombre, fechaNacimiento, genero, nivel, ubicaciones)
+        {
+            RutaFoto = null;
+        }
+
 
         // Método para obtener la imagen de la foto de perfil (o null si no hay)
         public Image ObtenerImagen()

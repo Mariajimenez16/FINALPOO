@@ -8,6 +8,8 @@ namespace ProyectoFinalPOO
 {
     public class Usuario
     {
+        private List<string> ubicacionesSeleccionadas;
+
         protected string Nombre { get; set; }
 
         protected DateTime FechaNacimiento { get; set; }
@@ -44,6 +46,15 @@ namespace ProyectoFinalPOO
 
             Ubicaciones = ubicaciones;
 
+        }
+
+        public Usuario(string nombre, DateTime fechaNacimiento, string? genero, string? nivel, List<string> ubicacionesSeleccionadas)
+        {
+            Nombre = nombre;
+            FechaNacimiento = fechaNacimiento;
+            Genero = genero;
+            Nivel = nivel;
+            this.ubicacionesSeleccionadas = ubicacionesSeleccionadas;
         }
 
         public static bool SoloLetrasYEspacios(string texto)

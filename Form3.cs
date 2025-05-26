@@ -1,49 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
-
 
 namespace ProyectoFinalPOO
 {
     public partial class Form3 : Form
     {
-        private List<Persona> personas;
+        private List<Persona> todasLasPersonas;
+        private List<Persona> personasFiltradas;
         private int indiceActual = 0;
 
         public Form3()
         {
             InitializeComponent();
 
-            // ✅ Conectar eventos al formulario y botones
+            // Eventos
             this.Load += Form3_Load;
             buttonMatch.Click += ButtonMatch_Click;
             buttonSiguiente.Click += ButtonSiguiente_Click;
+            comboBoxFiltroGenero.SelectedIndexChanged += ComboBoxFiltroGenero_SelectedIndexChanged;
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            
-            personas = new List<Persona>
+            // Inicializar ComboBox de filtro
+            comboBoxFiltroGenero.Items.AddRange(new string[] { "Todos", "Hombres", "Mujeres" });
+            comboBoxFiltroGenero.SelectedIndex = 0; // Por defecto: Todos
+
+            // Inicializar lista completa
+            todasLasPersonas = new List<Persona>
             {
-                new Persona("Manuel Vélez",   28, "Medellín",    Properties.Resources.matchman),
-                new Persona("Sofía Torres",   25, "Envigado",    Properties.Resources.matchwoman),
-                new Persona("Carlos Mejía",   30, "Sabaneta",    Properties.Resources.matchman2),
-                new Persona("Laura Restrepo", 26, "Bello",       Properties.Resources.matchwoman2),
-                new Persona("David Ríos",     32, "Itagüí",      Properties.Resources.matchman3),
-                new Persona("Camila Mora",    27, "La Estrella", Properties.Resources.matchwoman3)
+                new Persona("Manuel Vélez",   28, "Medellín",    "Hombre", Properties.Resources.matchman),
+                new Persona("Sofía Torres",   25, "Envigado",    "Mujer",  Properties.Resources.matchwoman),
+                new Persona("Carlos Mejía",   30, "Sabaneta",    "Hombre", Properties.Resources.matchman2),
+                new Persona("Laura Restrepo", 26, "Bello",       "Mujer",  Properties.Resources.matchwoman2),
+                new Persona("David Ríos",     32, "Itagüí",      "Hombre", Properties.Resources.matchman3),
+                new Persona("Camila Mora",    27, "La Estrella", "Mujer",  Properties.Resources.matchwoman3)
             };
 
-            // Mostrar la primera persona
-            MostrarPersona();
+            AplicarFiltro();
+        }
+
+        private void AplicarFiltro()
+        {
+            // Asegura que la colección no sea null
+            if (todasLasPersonas == null)
+            {
+               
+                return;
+            }
+
+            string filtro = comboBoxFiltroGenero.SelectedItem?.ToString() ?? "";
+
+            if (filtro == "Hombres")
+            {
+                personasFiltradas = todasLasPersonas
+                    .Where(p => p.Genero == "Hombre")
+                    .ToList();
+            }
+            else if (filtro == "Mujeres")
+            {
+                personasFiltradas = todasLasPersonas
+                    .Where(p => p.Genero == "Mujer")
+                    .ToList();
+            }
+            else
+            {
+                personasFiltradas = new List<Persona>(todasLasPersonas); 
+            }
+
+            
+        }
+
+
+        private void ComboBoxFiltroGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AplicarFiltro();
         }
 
         private void MostrarPersona()
         {
-            if (indiceActual < personas.Count)
+            if (indiceActual < personasFiltradas.Count)
             {
-                Persona p = personas[indiceActual];
+                Persona p = personasFiltradas[indiceActual];
 
                 labelNombre.Text = p.Nombre;
                 labelEdad.Text = "Edad: " + p.Edad;
@@ -51,6 +92,7 @@ namespace ProyectoFinalPOO
 
                 pictureBoxFoto.Image = p.Foto;
                 pictureBoxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                buttonSiguiente.Enabled = true;
             }
             else
             {
@@ -71,22 +113,28 @@ namespace ProyectoFinalPOO
             chat.Show();
             this.Hide();
         }
+
+        private void pictureBoxFoto_Click(object sender, EventArgs e)
+        {
+        }
     }
 
-   
     public class Persona
     {
         public string Nombre;
         public int Edad;
         public string Ubicacion;
+        public string Genero;
         public Image Foto;
 
-        public Persona(string nombre, int edad, string ubicacion, Image foto)
+        public Persona(string nombre, int edad, string ubicacion, string genero, Image foto)
         {
             Nombre = nombre;
             Edad = edad;
             Ubicacion = ubicacion;
+            Genero = genero;
             Foto = foto;
         }
     }
 }
+

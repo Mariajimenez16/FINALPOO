@@ -63,6 +63,26 @@ namespace ProyectoFinalPOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Coincidencia {
+            get {
+                object obj = ResourceManager.GetObject("Coincidencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Copia_de_Coincidencia {
+            get {
+                object obj = ResourceManager.GetObject("Copia de Coincidencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap matchman {
             get {
                 object obj = ResourceManager.GetObject("matchman", resourceCulture);
@@ -126,6 +146,16 @@ namespace ProyectoFinalPOO.Properties {
         internal static System.Drawing.Bitmap runmatch_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("runmatch-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RUNNERS_CLUB {
+            get {
+                object obj = ResourceManager.GetObject("RUNNERS CLUB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
