@@ -35,8 +35,6 @@
             buttonContinuar = new Button();
             labelGenero = new Label();
             comboBoxGenero = new ComboBox();
-            labelPreferencia = new Label();
-            comboBoxPreferencia = new ComboBox();
             labelNivel = new Label();
             comboBoxNivel = new ComboBox();
             checkedListBoxUbicacion = new CheckedListBox();
@@ -51,15 +49,17 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // labelRunMatch
             // 
             labelRunMatch.AutoSize = true;
             labelRunMatch.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRunMatch.Location = new Point(74, 15);
+            labelRunMatch.Location = new Point(107, 33);
             labelRunMatch.Margin = new Padding(4, 0, 4, 0);
             labelRunMatch.Name = "labelRunMatch";
             labelRunMatch.Size = new Size(178, 39);
@@ -69,7 +69,7 @@
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(73, 135);
+            textBoxNombre.Location = new Point(107, 135);
             textBoxNombre.Margin = new Padding(4, 5, 4, 5);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.Size = new Size(171, 31);
@@ -79,7 +79,7 @@
             // labelNombre
             // 
             labelNombre.AutoSize = true;
-            labelNombre.Location = new Point(73, 105);
+            labelNombre.Location = new Point(107, 105);
             labelNombre.Margin = new Padding(4, 0, 4, 0);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(78, 25);
@@ -91,7 +91,7 @@
             // 
             labelUbicacion.AutoSize = true;
             labelUbicacion.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUbicacion.Location = new Point(454, 105);
+            labelUbicacion.Location = new Point(107, 509);
             labelUbicacion.Margin = new Padding(4, 0, 4, 0);
             labelUbicacion.Name = "labelUbicacion";
             labelUbicacion.Size = new Size(178, 29);
@@ -102,7 +102,7 @@
             // buttonContinuar
             // 
             buttonContinuar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonContinuar.Location = new Point(420, 498);
+            buttonContinuar.Location = new Point(457, 555);
             buttonContinuar.Margin = new Padding(4, 5, 4, 5);
             buttonContinuar.Name = "buttonContinuar";
             buttonContinuar.Size = new Size(264, 80);
@@ -114,7 +114,7 @@
             // labelGenero
             // 
             labelGenero.AutoSize = true;
-            labelGenero.Location = new Point(73, 313);
+            labelGenero.Location = new Point(107, 302);
             labelGenero.Margin = new Padding(4, 0, 4, 0);
             labelGenero.Name = "labelGenero";
             labelGenero.Size = new Size(69, 25);
@@ -125,39 +125,18 @@
             // 
             comboBoxGenero.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxGenero.FormattingEnabled = true;
-            comboBoxGenero.Items.AddRange(new object[] { "Femenino ", "Masculino", "Otro" });
-            comboBoxGenero.Location = new Point(73, 343);
+            comboBoxGenero.Items.AddRange(new object[] { "Femenino ", "Masculino" });
+            comboBoxGenero.Location = new Point(107, 332);
             comboBoxGenero.Margin = new Padding(4, 5, 4, 5);
             comboBoxGenero.Name = "comboBoxGenero";
             comboBoxGenero.Size = new Size(171, 33);
             comboBoxGenero.TabIndex = 5;
             comboBoxGenero.SelectedIndexChanged += comboBoxGenero_SelectedIndexChanged;
             // 
-            // labelPreferencia
-            // 
-            labelPreferencia.AutoSize = true;
-            labelPreferencia.Location = new Point(73, 420);
-            labelPreferencia.Margin = new Padding(4, 0, 4, 0);
-            labelPreferencia.Name = "labelPreferencia";
-            labelPreferencia.Size = new Size(143, 50);
-            labelPreferencia.TabIndex = 6;
-            labelPreferencia.Text = "Preferencia para \r\ncorrer\r\n";
-            // 
-            // comboBoxPreferencia
-            // 
-            comboBoxPreferencia.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxPreferencia.FormattingEnabled = true;
-            comboBoxPreferencia.Items.AddRange(new object[] { "Mujeres ", "Hombres", "Mixto" });
-            comboBoxPreferencia.Location = new Point(73, 475);
-            comboBoxPreferencia.Margin = new Padding(4, 5, 4, 5);
-            comboBoxPreferencia.Name = "comboBoxPreferencia";
-            comboBoxPreferencia.Size = new Size(171, 33);
-            comboBoxPreferencia.TabIndex = 7;
-            // 
             // labelNivel
             // 
             labelNivel.AutoSize = true;
-            labelNivel.Location = new Point(71, 553);
+            labelNivel.Location = new Point(107, 403);
             labelNivel.Margin = new Padding(4, 0, 4, 0);
             labelNivel.Name = "labelNivel";
             labelNivel.Size = new Size(51, 25);
@@ -169,7 +148,7 @@
             comboBoxNivel.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNivel.FormattingEnabled = true;
             comboBoxNivel.Items.AddRange(new object[] { "Principiante", "Medio", "Avanzado" });
-            comboBoxNivel.Location = new Point(73, 583);
+            comboBoxNivel.Location = new Point(107, 444);
             comboBoxNivel.Margin = new Padding(4, 5, 4, 5);
             comboBoxNivel.Name = "comboBoxNivel";
             comboBoxNivel.Size = new Size(171, 33);
@@ -179,7 +158,7 @@
             // 
             checkedListBoxUbicacion.FormattingEnabled = true;
             checkedListBoxUbicacion.Items.AddRange(new object[] { "Aeroparque Juan Pablo II (Medellín)", "Avenida Las Vegas (Envigado)", "Cerro de las Tres Cruces (Medellín)", "Cerro El Picacho (Medellín)", "Cerro El Volador (Medellín)", "Ciclovía del Río (Medellín)", "Corredores Verdes (Medellín)", "Jardín Botánico (Medellín)", "Laguna Fontidueño (Bello)", "Parque Tulio Ospina (Bello)", "Pista de Atletismo Alfonso Galvis (Medellín)", "Unidad Deportiva Atanasio Girardot (Medellín)", "Unidad Deportiva de Belén (Medellín)", "Viva Envigado – Entrada Sabaneta Las Vegas (Envigado)" });
-            checkedListBoxUbicacion.Location = new Point(386, 152);
+            checkedListBoxUbicacion.Location = new Point(39, 555);
             checkedListBoxUbicacion.Margin = new Padding(4, 5, 4, 5);
             checkedListBoxUbicacion.Name = "checkedListBoxUbicacion";
             checkedListBoxUbicacion.Size = new Size(335, 172);
@@ -188,9 +167,9 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(255, 192, 192);
+            pictureBox2.BackColor = Color.MistyRose;
             pictureBox2.Image = Properties.Resources.runmatch_removebg_preview;
-            pictureBox2.Location = new Point(1057, 20);
+            pictureBox2.Location = new Point(30, 14);
             pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(69, 87);
@@ -208,7 +187,7 @@
             // dateTimePicker2
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(73, 245);
+            dateTimePicker2.Location = new Point(107, 231);
             dateTimePicker2.Margin = new Padding(4, 5, 4, 5);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(171, 31);
@@ -217,7 +196,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(73, 215);
+            label1.Location = new Point(107, 201);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(177, 25);
@@ -227,22 +206,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Impact", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(873, 135);
+            label2.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(845, 173);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(117, 51);
+            label2.Size = new Size(269, 117);
             label2.TabIndex = 14;
             label2.Text = "Corre";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(894, 192);
+            label3.Font = new Font("Times New Roman", 28F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(806, 271);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(107, 36);
+            label3.Size = new Size(187, 63);
             label3.TabIndex = 15;
             label3.Text = "Por La";
             label3.Click += label3_Click_1;
@@ -250,13 +229,24 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Lucida Calligraphy", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(873, 230);
+            label4.Font = new Font("Lucida Calligraphy", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(922, 334);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(129, 53);
+            label4.Size = new Size(175, 72);
             label4.TabIndex = 16;
             label4.Text = "Vida";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.RUNNERS_CLUB;
+            pictureBox1.Location = new Point(407, 78);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(369, 443);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form1
             // 
@@ -265,6 +255,7 @@
             BackColor = Color.MistyRose;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(1143, 750);
+            Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -273,9 +264,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(checkedListBoxUbicacion);
             Controls.Add(comboBoxNivel);
-            Controls.Add(comboBoxPreferencia);
             Controls.Add(labelNivel);
-            Controls.Add(labelPreferencia);
             Controls.Add(comboBoxGenero);
             Controls.Add(labelGenero);
             Controls.Add(buttonContinuar);
@@ -291,6 +280,7 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -305,8 +295,6 @@
         private Button buttonContinuar;
         private Label labelGenero;
         private ComboBox comboBoxGenero;
-        private Label labelPreferencia;
-        private ComboBox comboBoxPreferencia;
         private Label labelNivel;
         private ComboBox comboBoxNivel;
         private DateTimePicker dateTimePicker1;
@@ -322,5 +310,6 @@
         private Label label3;
         private Label label2;
         private Label label4;
+        private PictureBox pictureBox1;
     }
 }

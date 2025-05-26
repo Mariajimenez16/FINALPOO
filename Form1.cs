@@ -22,14 +22,11 @@ namespace ProyectoFinalPOO
 
         }
 
-        //validar que todos los campos esten llenos antes de darle click
-        //al bot�n continuar
+        // Validar que todos los campos estén llenos antes de darle click al botón continuar
         private bool ValidarCampos()
         {
-            // Verificar si alg�n campo est� vac�o
             if (string.IsNullOrWhiteSpace(textBoxNombre.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxGenero.Text) ||
-                string.IsNullOrWhiteSpace(comboBoxPreferencia.Text) ||
                 string.IsNullOrWhiteSpace(comboBoxNivel.Text) ||
                 dateTimePicker2.Value == DateTime.MinValue ||
                 checkedListBoxUbicacion.CheckedItems.Count == 0)
@@ -43,16 +40,13 @@ namespace ProyectoFinalPOO
 
         private void buttonContinuar_Click(object sender, EventArgs e)
         {
-
             try
             {
-                //activar la funci�n de validar campos
                 if (!ValidarCampos()) return;
 
                 string nombre = textBoxNombre.Text;
                 DateTime fechaNacimiento = dateTimePicker2.Value;
                 string genero = comboBoxGenero.SelectedItem?.ToString();
-                string preferencia = comboBoxPreferencia.SelectedItem?.ToString();
                 string nivel = comboBoxNivel.SelectedItem?.ToString();
 
                 List<string> ubicacionesSeleccionadas = new List<string>();
@@ -61,24 +55,22 @@ namespace ProyectoFinalPOO
                     ubicacionesSeleccionadas.Add(item.ToString());
                 }
 
-                Usuario nuevoUsuario = new Usuario(nombre, fechaNacimiento, genero, preferencia, nivel, ubicacionesSeleccionadas);
-
-                Perfil nuevoPerfil = new Perfil(nombre, fechaNacimiento, genero, preferencia, nivel, ubicacionesSeleccionadas);
+                // Como ya no se usa "preferencia", puedes pasar null o eliminar ese parámetro en Usuario/Perfil si ya no se necesita
+                Usuario nuevoUsuario = new Usuario(nombre, fechaNacimiento, genero, null, nivel, ubicacionesSeleccionadas);
+                Perfil nuevoPerfil = new Perfil(nombre, fechaNacimiento, genero, null, nivel, ubicacionesSeleccionadas);
 
                 Form2 pantalla2 = new Form2(nuevoPerfil);
-                pantalla2.Show();       // Muestra la pantalla 2
-                this.Hide();            // Oculta la pantalla actual (Form1)
-
+                pantalla2.Show();
+                this.Hide();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Error de Validaci�n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrio un error al abrir la siguiente pantalla: ESTE ES EL FRONT" + ex.Message);
+                MessageBox.Show("Ocurrió un error al abrir la siguiente pantalla: ESTE ES EL FRONT\n" + ex.Message);
             }
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -125,5 +117,11 @@ namespace ProyectoFinalPOO
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
