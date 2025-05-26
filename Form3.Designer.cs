@@ -44,10 +44,10 @@
             // 
             pictureBoxFoto.Image = Properties.Resources.matchman;
             pictureBoxFoto.InitialImage = (Image)resources.GetObject("pictureBoxFoto.InitialImage");
-            pictureBoxFoto.Location = new Point(160, 89);
-            pictureBoxFoto.Margin = new Padding(4, 5, 4, 5);
+            pictureBoxFoto.Location = new Point(128, 71);
+            pictureBoxFoto.Margin = new Padding(3, 4, 3, 4);
             pictureBoxFoto.Name = "pictureBoxFoto";
-            pictureBoxFoto.Size = new Size(256, 334);
+            pictureBoxFoto.Size = new Size(205, 267);
             pictureBoxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxFoto.TabIndex = 1;
             pictureBoxFoto.TabStop = false;
@@ -57,79 +57,90 @@
             // 
             labelNombre.AutoSize = true;
             labelNombre.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelNombre.Location = new Point(206, 428);
-            labelNombre.Margin = new Padding(4, 0, 4, 0);
+            labelNombre.Location = new Point(165, 342);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(158, 32);
+            labelNombre.Size = new Size(127, 28);
             labelNombre.TabIndex = 2;
             labelNombre.Text = "Manuel Vélez";
             // 
             // labelEdad
             // 
             labelEdad.AutoSize = true;
-            labelEdad.Location = new Point(160, 471);
-            labelEdad.Margin = new Padding(4, 0, 4, 0);
+            labelEdad.Location = new Point(128, 377);
             labelEdad.Name = "labelEdad";
-            labelEdad.Size = new Size(52, 25);
+            labelEdad.Size = new Size(43, 20);
             labelEdad.TabIndex = 3;
             labelEdad.Text = "Edad";
             // 
             // labelUbicacion
             // 
             labelUbicacion.AutoSize = true;
-            labelUbicacion.Location = new Point(160, 513);
-            labelUbicacion.Margin = new Padding(4, 0, 4, 0);
+            labelUbicacion.Location = new Point(128, 410);
             labelUbicacion.Name = "labelUbicacion";
-            labelUbicacion.Size = new Size(89, 25);
+            labelUbicacion.Size = new Size(75, 20);
             labelUbicacion.TabIndex = 4;
             labelUbicacion.Text = "Ubicación";
             // 
             // buttonMatch
             // 
-            buttonMatch.Location = new Point(105, 626);
-            buttonMatch.Margin = new Padding(4, 5, 4, 5);
+            buttonMatch.BackColor = Color.MediumSeaGreen;
+            buttonMatch.FlatAppearance.BorderSize = 0;
+            buttonMatch.FlatStyle = FlatStyle.Flat;
+            buttonMatch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonMatch.ForeColor = SystemColors.ButtonHighlight;
+            buttonMatch.Location = new Point(93, 501);
+            buttonMatch.Margin = new Padding(3, 4, 3, 4);
             buttonMatch.Name = "buttonMatch";
-            buttonMatch.Size = new Size(107, 38);
+            buttonMatch.Size = new Size(69, 30);
             buttonMatch.TabIndex = 5;
             buttonMatch.Text = "Match";
-            buttonMatch.UseVisualStyleBackColor = true;
+            buttonMatch.UseVisualStyleBackColor = false;
             // 
             // buttonSiguiente
             // 
-            buttonSiguiente.Location = new Point(365, 626);
-            buttonSiguiente.Margin = new Padding(4, 5, 4, 5);
+            buttonSiguiente.BackColor = Color.Red;
+            buttonSiguiente.FlatAppearance.BorderColor = Color.White;
+            buttonSiguiente.FlatAppearance.BorderSize = 0;
+            buttonSiguiente.FlatStyle = FlatStyle.Flat;
+            buttonSiguiente.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSiguiente.ForeColor = SystemColors.ButtonHighlight;
+            buttonSiguiente.Location = new Point(292, 501);
+            buttonSiguiente.Margin = new Padding(3, 4, 3, 4);
             buttonSiguiente.Name = "buttonSiguiente";
-            buttonSiguiente.Size = new Size(107, 38);
+            buttonSiguiente.Size = new Size(84, 30);
             buttonSiguiente.TabIndex = 6;
             buttonSiguiente.Text = "Siguiente";
-            buttonSiguiente.UseVisualStyleBackColor = true;
+            buttonSiguiente.UseVisualStyleBackColor = false;
+            buttonSiguiente.Click += buttonSiguiente_Click_1;
             // 
             // comboBoxFiltroGenero
             // 
             comboBoxFiltroGenero.FormattingEnabled = true;
-            comboBoxFiltroGenero.Location = new Point(310, 12);
+            comboBoxFiltroGenero.Location = new Point(248, 10);
+            comboBoxFiltroGenero.Margin = new Padding(2);
             comboBoxFiltroGenero.Name = "comboBoxFiltroGenero";
-            comboBoxFiltroGenero.Size = new Size(182, 33);
+            comboBoxFiltroGenero.Size = new Size(146, 28);
             comboBoxFiltroGenero.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(73, 14);
+            label1.Location = new Point(46, 11);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(231, 27);
+            label1.Size = new Size(198, 23);
             label1.TabIndex = 8;
             label1.Text = "Preferencia de Genero";
             // 
             // Form3
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             BackgroundImage = Properties.Resources.Coincidencia;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(914, 600);
             Controls.Add(label1);
             Controls.Add(comboBoxFiltroGenero);
             Controls.Add(buttonSiguiente);
@@ -138,7 +149,7 @@
             Controls.Add(labelEdad);
             Controls.Add(labelNombre);
             Controls.Add(pictureBoxFoto);
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form3";
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)pictureBoxFoto).EndInit();

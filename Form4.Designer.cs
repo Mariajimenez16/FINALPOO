@@ -37,38 +37,42 @@
             // 
             txtHistorial.Dock = DockStyle.Top;
             txtHistorial.Location = new Point(0, 0);
-            txtHistorial.MaximumSize = new Size(0, 300);
+            txtHistorial.Margin = new Padding(2);
+            txtHistorial.MaximumSize = new Size(4, 300);
             txtHistorial.Name = "txtHistorial";
             txtHistorial.ScrollBars = ScrollBars.Vertical;
-            txtHistorial.Size = new Size(1285, 31);
+            txtHistorial.Size = new Size(4, 27);
             txtHistorial.TabIndex = 0;
             // 
             // txtMensaje
             // 
             txtMensaje.Dock = DockStyle.Bottom;
-            txtMensaje.Location = new Point(0, 621);
+            txtMensaje.Location = new Point(0, 495);
+            txtMensaje.Margin = new Padding(2);
             txtMensaje.Name = "txtMensaje";
-            txtMensaje.Size = new Size(1285, 31);
+            txtMensaje.Size = new Size(1028, 27);
             txtMensaje.TabIndex = 1;
             // 
             // btnEnviar
             // 
             btnEnviar.Dock = DockStyle.Bottom;
-            btnEnviar.Location = new Point(0, 587);
+            btnEnviar.Location = new Point(0, 468);
+            btnEnviar.Margin = new Padding(2);
             btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(1285, 34);
+            btnEnviar.Size = new Size(1028, 27);
             btnEnviar.TabIndex = 2;
             btnEnviar.Text = "Enviar";
             btnEnviar.UseVisualStyleBackColor = true;
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1285, 652);
+            ClientSize = new Size(1028, 522);
             Controls.Add(btnEnviar);
             Controls.Add(txtMensaje);
             Controls.Add(txtHistorial);
+            Margin = new Padding(2);
             Name = "Form4";
             Text = "Form4";
             ResumeLayout(false);

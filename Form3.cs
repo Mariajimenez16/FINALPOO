@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using ProyectoFinalPOO;
 
 namespace ProyectoFinalPOO
 {
     public partial class Form3 : Form
     {
-        private List<Persona> todasLasPersonas;
-        private List<Persona> personasFiltradas;
-        private int indiceActual = 0;
+        private GestorCoincidencias gestorCoincidencias;
 
         public Form3()
         {
             InitializeComponent();
+            gestorCoincidencias = new GestorCoincidencias();
 
             // Eventos
             this.Load += Form3_Load;
@@ -30,81 +30,42 @@ namespace ProyectoFinalPOO
             comboBoxFiltroGenero.SelectedIndex = 0; // Por defecto: Todos
 
             // Inicializar lista completa
-            todasLasPersonas = new List<Persona>
-            {
-                new Persona("Manuel Vélez",   28, "Medellín",    "Hombre", Properties.Resources.matchman),
-                new Persona("Sofía Torres",   25, "Envigado",    "Mujer",  Properties.Resources.matchwoman),
-                new Persona("Carlos Mejía",   30, "Sabaneta",    "Hombre", Properties.Resources.matchman2),
-                new Persona("Laura Restrepo", 26, "Bello",       "Mujer",  Properties.Resources.matchwoman2),
-                new Persona("David Ríos",     32, "Itagüí",      "Hombre", Properties.Resources.matchman3),
-                new Persona("Camila Mora",    27, "La Estrella", "Mujer",  Properties.Resources.matchwoman3)
-            };
-
-            AplicarFiltro();
-        }
-
-        private void AplicarFiltro()
-        {
-            // Asegura que la colección no sea null
-            if (todasLasPersonas == null)
-            {
-               
-                return;
-            }
-
-            string filtro = comboBoxFiltroGenero.SelectedItem?.ToString() ?? "";
-
-            if (filtro == "Hombres")
-            {
-                personasFiltradas = todasLasPersonas
-                    .Where(p => p.Genero == "Hombre")
-                    .ToList();
-            }
-            else if (filtro == "Mujeres")
-            {
-                personasFiltradas = todasLasPersonas
-                    .Where(p => p.Genero == "Mujer")
-                    .ToList();
-            }
-            else
-            {
-                personasFiltradas = new List<Persona>(todasLasPersonas); 
-            }
-
             
+            MostrarPersona();
         }
 
 
         private void ComboBoxFiltroGenero_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AplicarFiltro();
+            gestorCoincidencias.AplicarFiltro(comboBoxFiltroGenero.SelectedItem?.ToString() ?? "Todos");
+            MostrarPersona();
+
         }
 
         private void MostrarPersona()
         {
-            if (indiceActual < personasFiltradas.Count)
+            Persona p = gestorCoincidencias.ObtenerPersonaActual();
+            if (p != null)
             {
-                Persona p = personasFiltradas[indiceActual];
-
                 labelNombre.Text = p.Nombre;
                 labelEdad.Text = "Edad: " + p.Edad;
                 labelUbicacion.Text = "Ubicación: " + p.Ubicacion;
-
                 pictureBoxFoto.Image = p.Foto;
                 pictureBoxFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 buttonSiguiente.Enabled = true;
             }
             else
             {
-                MessageBox.Show("No hay más personas disponibles.");
+                MessageBox.Show("No hay más personas disponibles.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 buttonSiguiente.Enabled = false;
             }
         }
 
         private void ButtonSiguiente_Click(object sender, EventArgs e)
         {
-            indiceActual++;
+            gestorCoincidencias.AvanzarPersona();
             MostrarPersona();
+
         }
 
         private void ButtonMatch_Click(object sender, EventArgs e)
@@ -117,24 +78,12 @@ namespace ProyectoFinalPOO
         private void pictureBoxFoto_Click(object sender, EventArgs e)
         {
         }
-    }
 
-    public class Persona
-    {
-        public string Nombre;
-        public int Edad;
-        public string Ubicacion;
-        public string Genero;
-        public Image Foto;
-
-        public Persona(string nombre, int edad, string ubicacion, string genero, Image foto)
+        private void buttonSiguiente_Click_1(object sender, EventArgs e)
         {
-            Nombre = nombre;
-            Edad = edad;
-            Ubicacion = ubicacion;
-            Genero = genero;
-            Foto = foto;
+          
         }
     }
+
 }
 
