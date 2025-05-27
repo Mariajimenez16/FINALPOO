@@ -48,7 +48,7 @@ namespace ProyectoFinalPOO
 
         }
 
-        public Usuario(string nombre, DateTime fechaNacimiento, string? genero, string? nivel, List<string> ubicacionesSeleccionadas)
+        public Usuario(string nombre, DateTime fechaNacimiento, string genero, string nivel, List<string> ubicacionesSeleccionadas)
         {
             Nombre = nombre;
             FechaNacimiento = fechaNacimiento;

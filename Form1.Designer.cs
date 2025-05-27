@@ -59,30 +59,28 @@
             // 
             labelRunMatch.AutoSize = true;
             labelRunMatch.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelRunMatch.Location = new Point(107, 33);
-            labelRunMatch.Margin = new Padding(4, 0, 4, 0);
+            labelRunMatch.Location = new Point(86, 26);
             labelRunMatch.Name = "labelRunMatch";
-            labelRunMatch.Size = new Size(178, 39);
+            labelRunMatch.Size = new Size(151, 33);
             labelRunMatch.TabIndex = 0;
             labelRunMatch.Text = "RunMatch";
             labelRunMatch.Click += labelRunMatch_Click;
             // 
             // textBoxNombre
             // 
-            textBoxNombre.Location = new Point(107, 135);
-            textBoxNombre.Margin = new Padding(4, 5, 4, 5);
+            textBoxNombre.Location = new Point(86, 108);
+            textBoxNombre.Margin = new Padding(3, 4, 3, 4);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(171, 31);
+            textBoxNombre.Size = new Size(138, 27);
             textBoxNombre.TabIndex = 1;
             textBoxNombre.TextChanged += textBox2_TextChanged;
             // 
             // labelNombre
             // 
             labelNombre.AutoSize = true;
-            labelNombre.Location = new Point(107, 105);
-            labelNombre.Margin = new Padding(4, 0, 4, 0);
+            labelNombre.Location = new Point(86, 84);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(78, 25);
+            labelNombre.Size = new Size(64, 20);
             labelNombre.TabIndex = 2;
             labelNombre.Text = "Nombre";
             labelNombre.Click += label2_Click;
@@ -91,10 +89,9 @@
             // 
             labelUbicacion.AutoSize = true;
             labelUbicacion.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUbicacion.Location = new Point(107, 509);
-            labelUbicacion.Margin = new Padding(4, 0, 4, 0);
+            labelUbicacion.Location = new Point(86, 407);
             labelUbicacion.Name = "labelUbicacion";
-            labelUbicacion.Size = new Size(178, 29);
+            labelUbicacion.Size = new Size(148, 24);
             labelUbicacion.TabIndex = 2;
             labelUbicacion.Text = "Our Locations";
             labelUbicacion.Click += label4_Click;
@@ -102,10 +99,10 @@
             // buttonContinuar
             // 
             buttonContinuar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonContinuar.Location = new Point(457, 555);
-            buttonContinuar.Margin = new Padding(4, 5, 4, 5);
+            buttonContinuar.Location = new Point(366, 444);
+            buttonContinuar.Margin = new Padding(3, 4, 3, 4);
             buttonContinuar.Name = "buttonContinuar";
-            buttonContinuar.Size = new Size(264, 80);
+            buttonContinuar.Size = new Size(211, 64);
             buttonContinuar.TabIndex = 3;
             buttonContinuar.Text = "Continuar";
             buttonContinuar.UseVisualStyleBackColor = true;
@@ -114,10 +111,9 @@
             // labelGenero
             // 
             labelGenero.AutoSize = true;
-            labelGenero.Location = new Point(107, 302);
-            labelGenero.Margin = new Padding(4, 0, 4, 0);
+            labelGenero.Location = new Point(86, 242);
             labelGenero.Name = "labelGenero";
-            labelGenero.Size = new Size(69, 25);
+            labelGenero.Size = new Size(57, 20);
             labelGenero.TabIndex = 4;
             labelGenero.Text = "Género";
             // 
@@ -126,20 +122,19 @@
             comboBoxGenero.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxGenero.FormattingEnabled = true;
             comboBoxGenero.Items.AddRange(new object[] { "Femenino ", "Masculino" });
-            comboBoxGenero.Location = new Point(107, 332);
-            comboBoxGenero.Margin = new Padding(4, 5, 4, 5);
+            comboBoxGenero.Location = new Point(86, 266);
+            comboBoxGenero.Margin = new Padding(3, 4, 3, 4);
             comboBoxGenero.Name = "comboBoxGenero";
-            comboBoxGenero.Size = new Size(171, 33);
+            comboBoxGenero.Size = new Size(138, 28);
             comboBoxGenero.TabIndex = 5;
             comboBoxGenero.SelectedIndexChanged += comboBoxGenero_SelectedIndexChanged;
             // 
             // labelNivel
             // 
             labelNivel.AutoSize = true;
-            labelNivel.Location = new Point(107, 403);
-            labelNivel.Margin = new Padding(4, 0, 4, 0);
+            labelNivel.Location = new Point(86, 322);
             labelNivel.Name = "labelNivel";
-            labelNivel.Size = new Size(51, 25);
+            labelNivel.Size = new Size(43, 20);
             labelNivel.TabIndex = 6;
             labelNivel.Text = "Nivel";
             // 
@@ -148,20 +143,20 @@
             comboBoxNivel.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNivel.FormattingEnabled = true;
             comboBoxNivel.Items.AddRange(new object[] { "Principiante", "Medio", "Avanzado" });
-            comboBoxNivel.Location = new Point(107, 444);
-            comboBoxNivel.Margin = new Padding(4, 5, 4, 5);
+            comboBoxNivel.Location = new Point(86, 355);
+            comboBoxNivel.Margin = new Padding(3, 4, 3, 4);
             comboBoxNivel.Name = "comboBoxNivel";
-            comboBoxNivel.Size = new Size(171, 33);
+            comboBoxNivel.Size = new Size(138, 28);
             comboBoxNivel.TabIndex = 7;
             // 
             // checkedListBoxUbicacion
             // 
             checkedListBoxUbicacion.FormattingEnabled = true;
-            checkedListBoxUbicacion.Items.AddRange(new object[] { "Aeroparque Juan Pablo II (Medellín)", "Avenida Las Vegas (Envigado)", "Cerro de las Tres Cruces (Medellín)", "Cerro El Picacho (Medellín)", "Cerro El Volador (Medellín)", "Ciclovía del Río (Medellín)", "Corredores Verdes (Medellín)", "Jardín Botánico (Medellín)", "Laguna Fontidueño (Bello)", "Parque Tulio Ospina (Bello)", "Pista de Atletismo Alfonso Galvis (Medellín)", "Unidad Deportiva Atanasio Girardot (Medellín)", "Unidad Deportiva de Belén (Medellín)", "Viva Envigado – Entrada Sabaneta Las Vegas (Envigado)" });
-            checkedListBoxUbicacion.Location = new Point(39, 555);
-            checkedListBoxUbicacion.Margin = new Padding(4, 5, 4, 5);
+            checkedListBoxUbicacion.Items.AddRange(new object[] { "Aeroparque Juan Pablo II (Medellín)", "Avenida Las Vegas (Envigado)", "Unidad Deportiva de Belén (Medellín)", "Cerro El Volador (Medellín)", "Cerro Tres Cruces (Medellín)", "Ciclovía Manila - Poblado ", "Parque Tulio Ospina (Bello)", "Unidad Deportiva Atanasio Girardot (Medellín)" });
+            checkedListBoxUbicacion.Location = new Point(31, 444);
+            checkedListBoxUbicacion.Margin = new Padding(3, 4, 3, 4);
             checkedListBoxUbicacion.Name = "checkedListBoxUbicacion";
-            checkedListBoxUbicacion.Size = new Size(335, 172);
+            checkedListBoxUbicacion.Size = new Size(269, 136);
             checkedListBoxUbicacion.TabIndex = 9;
             checkedListBoxUbicacion.SelectedIndexChanged += checkedListBoxUbicacion_SelectedIndexChanged;
             // 
@@ -169,10 +164,10 @@
             // 
             pictureBox2.BackColor = Color.MistyRose;
             pictureBox2.Image = Properties.Resources.runmatch_removebg_preview;
-            pictureBox2.Location = new Point(30, 14);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Location = new Point(24, 11);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(69, 87);
+            pictureBox2.Size = new Size(55, 70);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
@@ -187,19 +182,18 @@
             // dateTimePicker2
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(107, 231);
-            dateTimePicker2.Margin = new Padding(4, 5, 4, 5);
+            dateTimePicker2.Location = new Point(86, 185);
+            dateTimePicker2.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(171, 31);
+            dateTimePicker2.Size = new Size(138, 27);
             dateTimePicker2.TabIndex = 12;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(107, 201);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(86, 161);
             label1.Name = "label1";
-            label1.Size = new Size(177, 25);
+            label1.Size = new Size(149, 20);
             label1.TabIndex = 13;
             label1.Text = "Fecha de Nacimiento";
             // 
@@ -207,10 +201,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Impact", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(845, 173);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(676, 138);
             label2.Name = "label2";
-            label2.Size = new Size(269, 117);
+            label2.Size = new Size(226, 98);
             label2.TabIndex = 14;
             label2.Text = "Corre";
             // 
@@ -218,10 +211,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 28F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(806, 271);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(645, 217);
             label3.Name = "label3";
-            label3.Size = new Size(187, 63);
+            label3.Size = new Size(158, 52);
             label3.TabIndex = 15;
             label3.Text = "Por La";
             label3.Click += label3_Click_1;
@@ -230,19 +222,19 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Lucida Calligraphy", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(922, 334);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(738, 267);
             label4.Name = "label4";
-            label4.Size = new Size(175, 72);
+            label4.Size = new Size(147, 60);
             label4.TabIndex = 16;
             label4.Text = "Vida";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.RUNNERS_CLUB;
-            pictureBox1.Location = new Point(407, 78);
+            pictureBox1.Location = new Point(326, 62);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(369, 443);
+            pictureBox1.Size = new Size(295, 354);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 17;
             pictureBox1.TabStop = false;
@@ -250,11 +242,11 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(914, 600);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -274,7 +266,7 @@
             Controls.Add(labelRunMatch);
             Cursor = Cursors.Hand;
             ForeColor = Color.Black;
-            Margin = new Padding(4, 5, 4, 5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

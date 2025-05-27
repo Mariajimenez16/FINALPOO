@@ -83,6 +83,16 @@ namespace ProyectoFinalPOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DegradadoFondo {
+            get {
+                object obj = ResourceManager.GetObject("DegradadoFondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap matchman {
             get {
                 object obj = ResourceManager.GetObject("matchman", resourceCulture);
