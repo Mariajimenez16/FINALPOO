@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ProyectoFinalPOO
@@ -12,43 +13,56 @@ namespace ProyectoFinalPOO
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            txtHistorial.Text = "Bienvenido al Chat Simulado.\r\n";
+            txtChat.Text = "👟 Match encontrado. Puedes empezar a chatear con tu pareja para correr.";
         }
 
-        private void btnEnviar_Click(object sender, EventArgs e)
+        private void BtnHola_Click(object sender, EventArgs e)
         {
-            string mensajeUsuario = txtMensaje.Text.Trim();
+            Interactuar("Hola");
+        }
 
-            if (string.IsNullOrEmpty(mensajeUsuario))
+        private void BtnDia_Click(object sender, EventArgs e)
+        {
+            Interactuar("¿Qué día estás disponible?");
+        }
+
+        private void BtnHora_Click(object sender, EventArgs e)
+        {
+            Interactuar("¿A qué hora quieres correr?");
+        }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Close();
+        }
+
+        private void Interactuar(string mensajeUsuario)
+        {
+            txtChat.AppendText($"\r\nTú: {mensajeUsuario}");
+            string respuesta = Responder(mensajeUsuario);
+            txtChat.AppendText($"\r\nMatch: {respuesta}\r\n");
+        }
+
+        private string Responder(string mensaje)
+        {
+            if (mensaje.Contains("Hola"))
             {
-                MessageBox.Show("Escribe un mensaje antes de enviarlo.");
-                return;
+                return "¡Hola! Qué emoción poder correr contigo 🏃‍♀️💬";
             }
-
-            // Mostrar el mensaje del usuario
-            txtHistorial.AppendText("Tú: " + mensajeUsuario + Environment.NewLine);
-
-            // Simular respuesta del "bot"
-            string respuesta = RespuestaBot(mensajeUsuario);
-            txtHistorial.AppendText("Bot: " + respuesta + Environment.NewLine);
-
-            // Limpiar el campo de entrada
-            txtMensaje.Clear();
-            txtMensaje.Focus();
-        }
-
-        private string RespuestaBot(string mensaje)
-        {
-            mensaje = mensaje.ToLower();
-
-            if (mensaje.Contains("hola"))
-                return "¡Hola! ¿Cómo estás?";
-            else if (mensaje.Contains("gracias"))
-                return "Con gusto 😊";
-            else if (mensaje.Contains("adios") || mensaje.Contains("chao"))
-                return "¡Hasta pronto!";
+            else if (mensaje.Contains("día"))
+            {
+                return "Podría el sábado o el domingo. ¿Y tú?";
+            }
+            else if (mensaje.Contains("hora"))
+            {
+                return "Prefiero por la mañana, ¿te parece a las 7am?";
+            }
             else
-                return "No entendí tu mensaje. 😅";
+            {
+                return "No entendí bien eso, ¿podrías repetirlo?";
+            }
         }
     }
 }

@@ -2,15 +2,8 @@
 {
     partial class Form4
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,67 +15,92 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            txtHistorial = new TextBox();
-            txtMensaje = new TextBox();
-            btnEnviar = new Button();
+            txtChat = new TextBox();
+            btnHola = new Button();
+            btnDia = new Button();
+            btnHora = new Button();
+            btnVolver = new Button();
             SuspendLayout();
             // 
-            // txtHistorial
+            // txtChat
             // 
-            txtHistorial.Dock = DockStyle.Top;
-            txtHistorial.Location = new Point(0, 0);
-            txtHistorial.Margin = new Padding(2);
-            txtHistorial.MaximumSize = new Size(4, 300);
-            txtHistorial.Name = "txtHistorial";
-            txtHistorial.ScrollBars = ScrollBars.Vertical;
-            txtHistorial.Size = new Size(4, 27);
-            txtHistorial.TabIndex = 0;
+            txtChat.BackColor = Color.Ivory;
+            txtChat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtChat.Location = new Point(100, 20);
+            txtChat.Multiline = true;
+            txtChat.Name = "txtChat";
+            txtChat.ReadOnly = true;
+            txtChat.ScrollBars = ScrollBars.Vertical;
+            txtChat.Size = new Size(700, 250);
+            txtChat.TabIndex = 0;
             // 
-            // txtMensaje
+            // btnHola
             // 
-            txtMensaje.Dock = DockStyle.Bottom;
-            txtMensaje.Location = new Point(0, 495);
-            txtMensaje.Margin = new Padding(2);
-            txtMensaje.Name = "txtMensaje";
-            txtMensaje.Size = new Size(1028, 27);
-            txtMensaje.TabIndex = 1;
+            btnHola.Location = new Point(150, 290);
+            btnHola.Name = "btnHola";
+            btnHola.Size = new Size(100, 40);
+            btnHola.TabIndex = 1;
+            btnHola.Text = "Hola";
+            btnHola.UseVisualStyleBackColor = true;
+            btnHola.Click += BtnHola_Click;
             // 
-            // btnEnviar
+            // btnDia
             // 
-            btnEnviar.Dock = DockStyle.Bottom;
-            btnEnviar.Location = new Point(0, 468);
-            btnEnviar.Margin = new Padding(2);
-            btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(1028, 27);
-            btnEnviar.TabIndex = 2;
-            btnEnviar.Text = "Enviar";
-            btnEnviar.UseVisualStyleBackColor = true;
+            btnDia.Location = new Point(280, 290);
+            btnDia.Name = "btnDia";
+            btnDia.Size = new Size(180, 40);
+            btnDia.TabIndex = 2;
+            btnDia.Text = "¿Qué día estás disponible?";
+            btnDia.UseVisualStyleBackColor = true;
+            btnDia.Click += BtnDia_Click;
+            // 
+            // btnHora
+            // 
+            btnHora.Location = new Point(480, 290);
+            btnHora.Name = "btnHora";
+            btnHora.Size = new Size(180, 40);
+            btnHora.TabIndex = 3;
+            btnHora.Text = "¿A qué hora quieres correr?";
+            btnHora.UseVisualStyleBackColor = true;
+            btnHora.Click += BtnHora_Click;
+            // 
+            // btnVolver
+            // 
+            btnVolver.Location = new Point(390, 340);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(100, 30);
+            btnVolver.TabIndex = 4;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += BtnVolver_Click;
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1028, 522);
-            Controls.Add(btnEnviar);
-            Controls.Add(txtMensaje);
-            Controls.Add(txtHistorial);
-            Margin = new Padding(2);
+            BackColor = Color.MistyRose;
+            ClientSize = new Size(900, 400);
+            Controls.Add(txtChat);
+            Controls.Add(btnHola);
+            Controls.Add(btnDia);
+            Controls.Add(btnHora);
+            Controls.Add(btnVolver);
             Name = "Form4";
-            Text = "Form4";
+            Text = "Chat iniciado con tu match 🏃‍♂️💬";
+            Load += Form4_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox txtHistorial;
-        private TextBox txtMensaje;
-        private Button btnEnviar;
+        private TextBox txtChat;
+        private Button btnHola;
+        private Button btnDia;
+        private Button btnHora;
+        private Button btnVolver;
     }
 }
+
