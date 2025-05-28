@@ -132,7 +132,7 @@
             // labelNivel
             // 
             labelNivel.AutoSize = true;
-            labelNivel.Location = new Point(86, 322);
+            labelNivel.Location = new Point(86, 331);
             labelNivel.Name = "labelNivel";
             labelNivel.Size = new Size(43, 20);
             labelNivel.TabIndex = 6;
@@ -152,7 +152,7 @@
             // checkedListBoxUbicacion
             // 
             checkedListBoxUbicacion.FormattingEnabled = true;
-            checkedListBoxUbicacion.Items.AddRange(new object[] { "Aeroparque Juan Pablo II (Medellín)", "Avenida Las Vegas (Envigado)", "Unidad Deportiva de Belén (Medellín)", "Cerro El Volador (Medellín)", "Cerro Tres Cruces (Medellín)", "Ciclovía Manila - Poblado ", "Parque Tulio Ospina (Bello)", "Unidad Deportiva Atanasio Girardot (Medellín)" });
+            checkedListBoxUbicacion.Items.AddRange(new object[] { "Aeroparque Juan Pablo II (Medellín)", "Avenida Las Vegas (Envigado)", "Unidad Deportiva de Belén (Medellín)", "Cerro El Volador (Medellín)", "Cerro Tres Cruces (Medellín)", "Ciclovía Manila - Poblado", "Parque Tulio Ospina (Bello)", "Unidad Deportiva Atanasio Girardot (Medellín)" });
             checkedListBoxUbicacion.Location = new Point(31, 444);
             checkedListBoxUbicacion.Margin = new Padding(3, 4, 3, 4);
             checkedListBoxUbicacion.Name = "checkedListBoxUbicacion";
@@ -232,7 +232,7 @@
             // 
             pictureBox1.Image = Properties.Resources.RUNNERS_CLUB;
             pictureBox1.Location = new Point(326, 62);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(295, 354);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;

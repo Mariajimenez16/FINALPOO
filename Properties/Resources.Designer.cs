@@ -63,6 +63,26 @@ namespace ProyectoFinalPOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Atanasio_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("Atanasio_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Atanasio_Ruta2 {
+            get {
+                object obj = ResourceManager.GetObject("Atanasio_Ruta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coincidencia {
             get {
                 object obj = ResourceManager.GetObject("Coincidencia", resourceCulture);
@@ -83,9 +103,69 @@ namespace ProyectoFinalPOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CVolador_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("CVolador_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CVolador_Ruta2 {
+            get {
+                object obj = ResourceManager.GetObject("CVolador_Ruta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DegradadoFondo {
             get {
                 object obj = ResourceManager.GetObject("DegradadoFondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JPII_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("JPII_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JPII_Ruta2 {
+            get {
+                object obj = ResourceManager.GetObject("JPII_Ruta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LaVegas_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("LaVegas_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manila_ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("Manila_ruta1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +233,16 @@ namespace ProyectoFinalPOO.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Perfil {
+            get {
+                object obj = ResourceManager.GetObject("Perfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap runmatch_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("runmatch-removebg-preview", resourceCulture);
@@ -166,6 +256,56 @@ namespace ProyectoFinalPOO.Properties {
         internal static System.Drawing.Bitmap RUNNERS_CLUB {
             get {
                 object obj = ResourceManager.GetObject("RUNNERS CLUB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tospina_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("Tospina_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tospina_Ruta2_png {
+            get {
+                object obj = ResourceManager.GetObject("Tospina_Ruta2.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TresC_Ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("TresC_Ruta1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TresC_Ruta2 {
+            get {
+                object obj = ResourceManager.GetObject("TresC_Ruta2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UnidadBelen_ruta1 {
+            get {
+                object obj = ResourceManager.GetObject("UnidadBelen_ruta1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

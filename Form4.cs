@@ -9,10 +9,12 @@ namespace ProyectoFinalPOO
     //hereda de la clase Form, lo que le permite comportarse como una ventana(formulario) en Windows.
     public partial class Form4 : Form
     {
+
         public Form4()
         {
             InitializeComponent(); //inicializa todos los controles visuales
                                    //del formulario: botones, textos, colores.
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -82,6 +84,14 @@ namespace ProyectoFinalPOO
             {
                 return "No entendí bien eso, ¿podrías repetirlo?";
             }
+        }
+
+        private void btnMapa_Click(object sender, EventArgs e)
+        {
+
+            Form6 pantallaRutas = new Form6();
+            pantallaRutas.Show();
+
         }
     }
 }
