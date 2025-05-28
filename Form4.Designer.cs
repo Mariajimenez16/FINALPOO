@@ -4,6 +4,9 @@
     {
         private System.ComponentModel.IContainer components = null;
 
+        // Método que se ejecuta al cerrar o eliminar el formulario.
+        // Sobrescribe el método Dispose de la clase base para liberar memoria y recursos utilizados.
+        // Se usa protected porque es accesible desde clases hijas, y override porque personaliza el comportamiento original.
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,12 +25,14 @@
             btnDia = new Button();
             btnHora = new Button();
             btnVolver = new Button();
+            btnBrunch = new Button();
+            btnMapa = new Button();
             SuspendLayout();
             // 
             // txtChat
             // 
             txtChat.BackColor = Color.Ivory;
-            txtChat.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtChat.Font = new Font("Segoe UI", 12F);
             txtChat.Location = new Point(100, 20);
             txtChat.Multiline = true;
             txtChat.Name = "txtChat";
@@ -76,12 +81,34 @@
             btnVolver.UseVisualStyleBackColor = true;
             btnVolver.Click += BtnVolver_Click;
             // 
+            // btnBrunch
+            // 
+            btnBrunch.BackgroundImage = Properties.Resources.DegradadoFondo;
+            btnBrunch.Location = new Point(725, 299);
+            btnBrunch.Name = "btnBrunch";
+            btnBrunch.Size = new Size(75, 40);
+            btnBrunch.TabIndex = 5;
+            btnBrunch.Text = "Invitar a Brunch";
+            btnBrunch.UseVisualStyleBackColor = true;
+            // 
+            // btnMapa
+            // 
+            btnMapa.BackgroundImage = Properties.Resources.DegradadoFondo;
+            btnMapa.Location = new Point(813, 299);
+            btnMapa.Name = "btnMapa";
+            btnMapa.Size = new Size(75, 40);
+            btnMapa.TabIndex = 6;
+            btnMapa.Text = "Rutas";
+            btnMapa.UseVisualStyleBackColor = true;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(900, 400);
+            Controls.Add(btnMapa);
+            Controls.Add(btnBrunch);
             Controls.Add(txtChat);
             Controls.Add(btnHola);
             Controls.Add(btnDia);
@@ -101,6 +128,8 @@
         private Button btnDia;
         private Button btnHora;
         private Button btnVolver;
+        private Button btnBrunch;
+        private Button btnMapa;
     }
 }
 
