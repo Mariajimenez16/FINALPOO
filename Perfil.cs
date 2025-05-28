@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalPOO
 {
+    //Aquí la clase Perfil que hereda de clase Usuario
     public class Perfil : Usuario
     {
+        //el atributo es lista privada que guarda las ubicaciones
+        //seleccionadas por el usuario. Al ser private, solo puede usarse dentro de la clase Perfil.
         private List<string> ubicacionesSeleccionadas;
 
         public string RutaFoto { get; set; }

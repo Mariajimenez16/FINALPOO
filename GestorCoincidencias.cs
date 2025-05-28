@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalPOO
 {
+    // Clase que gestiona las personas disponibles y aplica filtros para mostrar coincidencias.
     public class GestorCoincidencias
     {
+        // Lista que contiene todas las personas disponibles.
         private List<Persona> todasLasPersonas;
+        // Lista con las personas filtradas según género u otros criterios.
         private List<Persona> personasFiltradas;
+        //Índice que indica cuál persona se está mostrando actualmente.
         private int indiceActual = 0;
 
+
+        // Constructor: se ejecuta automáticamente al crear un objeto GestorCoincidencias.
+        // Aquí se inicializa la lista de personas con datos de ejemplo.
         public GestorCoincidencias()
         {
             todasLasPersonas = new List<Persona>
@@ -23,10 +30,13 @@ namespace ProyectoFinalPOO
                 new Persona("David Ríos",     32, "Itagüí",      "Hombre", Properties.Resources.matchman3),
                 new Persona("Camila Mora",    27, "La Estrella", "Mujer",  Properties.Resources.matchwoman3)
             };
+            // Al principio, las personas filtradas son todas las personas disponibles.
             personasFiltradas = new List<Persona>(todasLasPersonas);
+            // Se inicia mostrando la primera persona.
             indiceActual = 0;
         }
 
+        // Método que aplica un filtro por género: "Hombres", "Mujeres" o todos.
         public void AplicarFiltro(string filtro)
         {
             // Asegura que la colección no sea null
@@ -36,7 +46,7 @@ namespace ProyectoFinalPOO
             }
 
             //Aplicacion de LINQ - Programacion funcional
-
+            // Si el filtro es "Hombres", se seleccionan solo personas cuyo género es Hombre.
             if (filtro == "Hombres")
                 personasFiltradas = todasLasPersonas.Where(p => p.Genero == "Hombre").ToList();
             else if (filtro == "Mujeres")
@@ -50,6 +60,7 @@ namespace ProyectoFinalPOO
             return indiceActual < personasFiltradas.Count ? personasFiltradas[indiceActual] : null;
         }
 
+        // Avanza al siguiente elemento de la lista filtrada si aún no se ha llegado al final.
         public void AvanzarPersona()
         {
             if (indiceActual < personasFiltradas.Count)
