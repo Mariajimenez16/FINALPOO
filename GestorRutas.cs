@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalPOO
 {
+    // Clase que gestiona las rutas disponibles según la ubicación. Usa una relacion de composición con la Clase Ruta.
     public class GestorRutas
     {
+        //Atributo tipo Diccionario que almacena las ubicaciones y sus respectivas listas de rutas
         public Dictionary<string, List<Ruta>> rutasPorUbicacion = new Dictionary<string, List<Ruta>>();
 
-        public GestorRutas()
+        public GestorRutas()  // Constructor que inicializa las rutas disponibles
         {
-
+            // Se agregan las ubicaciones junto con sus rutas correspondientes
             rutasPorUbicacion.Add("Aeroparque Juan Pablo II (Medellín)", new List<Ruta>
             {
                 new Ruta("Sugerencia #1", Properties.Resources.JPII_Ruta1),
@@ -61,19 +63,20 @@ namespace ProyectoFinalPOO
 
         }
 
+        // Método que recibe una lista de ubicaciones seleccionadas en el registro (Form1) y devuelve sus rutas correspondientes
         public List<Ruta> ObtenerRutasPorUbicaciones(List<string> ubicacionesSeleccionadas)
         {
-            List<Ruta> rutasFiltradas = new List<Ruta>();
+            List<Ruta> rutasFiltradas = new List<Ruta>();   // Lista donde se guardarán las rutas encontradas
 
-            foreach (var ubicacion in ubicacionesSeleccionadas)
+            foreach (var ubicacion in ubicacionesSeleccionadas) // Recorre las ubicaciones seleccionadas por el usuario
             {
-                 if (rutasPorUbicacion.ContainsKey(ubicacion))
-                 {
-                    rutasFiltradas.AddRange(rutasPorUbicacion[ubicacion]);
-                 }
+                if (rutasPorUbicacion.ContainsKey(ubicacion)) // Verifica si la ubicación existe en el diccionario
+                {
+                    rutasFiltradas.AddRange(rutasPorUbicacion[ubicacion]); // Agrega las rutas de esa ubicación a la lista
+                }
             }
 
-            return rutasFiltradas;
+            return rutasFiltradas; // Devuelve la lista de rutas filtradas
         }
 
     }
