@@ -58,11 +58,13 @@
             // 
             // FotoPerfil
             // 
-            FotoPerfil.BackColor = Color.WhiteSmoke;
-            FotoPerfil.BorderStyle = BorderStyle.FixedSingle;
+            FotoPerfil.BackColor = Color.Transparent;
+            FotoPerfil.BackgroundImage = Properties.Resources.Perfil;
+            FotoPerfil.BackgroundImageLayout = ImageLayout.Zoom;
             FotoPerfil.Location = new Point(133, 87);
             FotoPerfil.Name = "FotoPerfil";
-            FotoPerfil.Size = new Size(259, 220);
+            FotoPerfil.Size = new Size(259, 235);
+            FotoPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
             FotoPerfil.TabIndex = 1;
             FotoPerfil.TabStop = false;
             // 

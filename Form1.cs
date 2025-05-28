@@ -38,22 +38,27 @@ namespace ProyectoFinalPOO
             return true;
         }
 
+        public static List<string> ubicacionesSeleccionadas = new List<string>();
+
         private void buttonContinuar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (!ValidarCampos()) return;
 
+                ubicacionesSeleccionadas.Clear();
+
                 string nombre = textBoxNombre.Text;
                 DateTime fechaNacimiento = dateTimePicker2.Value;
                 string genero = comboBoxGenero.SelectedItem?.ToString();
                 string nivel = comboBoxNivel.SelectedItem?.ToString();
 
-                List<string> ubicacionesSeleccionadas = new List<string>();
+                
                 foreach (var item in checkedListBoxUbicacion.CheckedItems)
                 {
                     ubicacionesSeleccionadas.Add(item.ToString());
                 }
+
 
                 // Como ya no se usa "preferencia", puedes pasar null o eliminar ese parámetro en Usuario/Perfil si ya no se necesita
                 Usuario nuevoUsuario = new Usuario(nombre, fechaNacimiento, genero, null, nivel, ubicacionesSeleccionadas);
