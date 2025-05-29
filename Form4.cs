@@ -93,5 +93,11 @@ namespace ProyectoFinalPOO
             pantallaRutas.Show();
 
         }
+
+        private void btnBrunch_Click(object sender, EventArgs e)
+        {
+            Form5 pantallabrunch = new Form5();
+            pantallabrunch.Show();
+        }
     }
 }
