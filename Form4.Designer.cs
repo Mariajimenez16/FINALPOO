@@ -33,21 +33,21 @@
             // 
             txtChat.BackColor = Color.Ivory;
             txtChat.Font = new Font("Segoe UI", 12F);
-            txtChat.Location = new Point(114, 27);
-            txtChat.Margin = new Padding(3, 4, 3, 4);
+            txtChat.Location = new Point(142, 34);
+            txtChat.Margin = new Padding(4, 5, 4, 5);
             txtChat.Multiline = true;
             txtChat.Name = "txtChat";
             txtChat.ReadOnly = true;
             txtChat.ScrollBars = ScrollBars.Vertical;
-            txtChat.Size = new Size(799, 332);
+            txtChat.Size = new Size(998, 414);
             txtChat.TabIndex = 0;
             // 
             // btnHola
             // 
-            btnHola.Location = new Point(171, 387);
-            btnHola.Margin = new Padding(3, 4, 3, 4);
+            btnHola.Location = new Point(214, 484);
+            btnHola.Margin = new Padding(4, 5, 4, 5);
             btnHola.Name = "btnHola";
-            btnHola.Size = new Size(114, 53);
+            btnHola.Size = new Size(142, 66);
             btnHola.TabIndex = 1;
             btnHola.Text = "Hola";
             btnHola.UseVisualStyleBackColor = true;
@@ -55,10 +55,10 @@
             // 
             // btnDia
             // 
-            btnDia.Location = new Point(320, 387);
-            btnDia.Margin = new Padding(3, 4, 3, 4);
+            btnDia.Location = new Point(400, 484);
+            btnDia.Margin = new Padding(4, 5, 4, 5);
             btnDia.Name = "btnDia";
-            btnDia.Size = new Size(206, 53);
+            btnDia.Size = new Size(258, 66);
             btnDia.TabIndex = 2;
             btnDia.Text = "¿Qué día estás disponible?";
             btnDia.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // 
             // btnHora
             // 
-            btnHora.Location = new Point(549, 387);
-            btnHora.Margin = new Padding(3, 4, 3, 4);
+            btnHora.Location = new Point(686, 484);
+            btnHora.Margin = new Padding(4, 5, 4, 5);
             btnHora.Name = "btnHora";
-            btnHora.Size = new Size(206, 53);
+            btnHora.Size = new Size(258, 66);
             btnHora.TabIndex = 3;
             btnHora.Text = "¿A qué hora quieres correr?";
             btnHora.UseVisualStyleBackColor = true;
@@ -77,10 +77,10 @@
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(446, 453);
-            btnVolver.Margin = new Padding(3, 4, 3, 4);
+            btnVolver.Location = new Point(558, 566);
+            btnVolver.Margin = new Padding(4, 5, 4, 5);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(114, 40);
+            btnVolver.Size = new Size(142, 50);
             btnVolver.TabIndex = 4;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
@@ -89,21 +89,22 @@
             // btnBrunch
             // 
             btnBrunch.BackgroundImage = Properties.Resources.DegradadoFondo;
-            btnBrunch.Location = new Point(829, 399);
-            btnBrunch.Margin = new Padding(3, 4, 3, 4);
+            btnBrunch.Location = new Point(1036, 499);
+            btnBrunch.Margin = new Padding(4, 5, 4, 5);
             btnBrunch.Name = "btnBrunch";
-            btnBrunch.Size = new Size(86, 53);
+            btnBrunch.Size = new Size(108, 66);
             btnBrunch.TabIndex = 5;
             btnBrunch.Text = "Invitar a Brunch";
             btnBrunch.UseVisualStyleBackColor = true;
+            btnBrunch.Click += btnBrunch_Click;
             // 
             // btnMapa
             // 
             btnMapa.BackgroundImage = Properties.Resources.DegradadoFondo;
-            btnMapa.Location = new Point(929, 399);
-            btnMapa.Margin = new Padding(3, 4, 3, 4);
+            btnMapa.Location = new Point(1161, 499);
+            btnMapa.Margin = new Padding(4, 5, 4, 5);
             btnMapa.Name = "btnMapa";
-            btnMapa.Size = new Size(86, 53);
+            btnMapa.Size = new Size(108, 66);
             btnMapa.TabIndex = 6;
             btnMapa.Text = "Rutas";
             btnMapa.UseVisualStyleBackColor = true;
@@ -111,10 +112,10 @@
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
-            ClientSize = new Size(1029, 533);
+            ClientSize = new Size(1286, 666);
             Controls.Add(btnMapa);
             Controls.Add(btnBrunch);
             Controls.Add(txtChat);
@@ -122,7 +123,7 @@
             Controls.Add(btnDia);
             Controls.Add(btnHora);
             Controls.Add(btnVolver);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form4";
             Text = "Chat iniciado con tu match 🏃‍♂️💬";
             Load += Form4_Load;
